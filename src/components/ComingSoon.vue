@@ -41,6 +41,7 @@ export default {
   margin: 0 auto;
 
   #mc-embedded-subscribe {
+    margin: 10px 0 0 0;
     border: 0;
     background: #fff;
     color: #000;
