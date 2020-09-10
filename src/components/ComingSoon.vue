@@ -1,7 +1,12 @@
 <template>
   <div class="container">
     <section class="content">
-      <h1 class="wordmark">Henceforward</h1>
+
+      <div class="headline">
+        <h1 class="wordmark">Henceforward</h1>
+        <div class="arrows"></div>
+      </div>
+
       <p class="p1">
         this will be a resource for all who seek to see social equity & racial justice in our lifetime by any <span class="highlight">means</span> necessary.
       </p>
@@ -58,10 +63,24 @@ export default {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  // align-content: space-between;
   min-width: 100vw;
   min-height: 100vh;
-  // overflow: auto;
+
+  .headline {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.0em;
+  }
+
+  .arrows {
+    width: 106px;
+    height: 40px;
+    background-image: url(../assets/arrows_large.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
 
   .content {
     display: flex;
@@ -143,11 +162,30 @@ export default {
   }
 
   @media screen and (max-width: 600px) {
+    .content {
+      padding: 0 7%;
+      margin-bottom: 5em;
+    }
+
+    .headline {
+      flex-flow: column-reverse nowrap;
+      align-items: start;
+    }
+
+    .arrows {
+      width: 52px;
+      height: 20px;
+      margin: 5.0em 0 7.0em;
+      background-image: url(../assets/arrows_small.png);
+    }
+
     .subscribe-form {
       flex-flow: column nowrap;
 
       &__field {
         max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
       }
 
       &__input {
@@ -160,7 +198,7 @@ export default {
     }
   }
 
-  @media screen and (max-height: 700px) {
+  @media screen and (max-height: 800px) {
     footer {
       flex: 0 1 10vh;
     }
