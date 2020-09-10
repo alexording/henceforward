@@ -1,5 +1,7 @@
 # henceforward
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ce5e098c-fda6-4521-8edf-604991791e4b/deploy-status)](https://app.netlify.com/sites/henceforward/deploys)
+
 ## Project setup
 ```
 npm install
