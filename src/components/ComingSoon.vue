@@ -66,6 +66,16 @@ export default {
   min-width: 100%;
   min-height: 100%;
 
+  .content {
+    margin: 5em 10%;
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    flex: 2 0 auto;
+    background: #fff;
+  }
+
   .headline {
     display: flex;
     flex-flow: row nowrap;
@@ -80,24 +90,7 @@ export default {
     background-image: url(../assets/arrows_large.png);
     background-repeat: no-repeat;
     background-position: top left;
-  }
-
-  .content {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    flex: 2 0 auto;
-    padding: 0 10%;
-    background: #fff;
-  }
-
-  footer {
-    flex: 0 1 25vh;
-    align-self: flex-end;
-    width: 100%;
-    padding: 10%;
-    background: #000;
-    color: #fff;
+    background-size: contain;
   }
 
   .subscribe-form-wrapper {
@@ -161,10 +154,18 @@ export default {
     }
   }
 
+  footer {
+    flex: 0 1 25vh;
+    align-self: flex-end;
+    width: 100%;
+    padding: 10%;
+    background: #000;
+    color: #fff;
+  }
+
   @media screen and (max-width: 600px) {
     .content {
-      padding: 0 7%;
-      margin-bottom: 5em;
+      margin: 7em 7%;
     }
 
     .headline {
@@ -175,7 +176,7 @@ export default {
     .arrows {
       width: 52px;
       height: 20px;
-      margin: 5.0em 0 7.0em;
+      margin: 0 0 7.0em;
       background-image: url(../assets/arrows_small.png);
     }
 
