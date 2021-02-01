@@ -197,8 +197,12 @@ export default {
     flex-flow: row nowrap;
     flex: 0 0 auto;
     justify-content: space-between;
-    background: #130729;
     color: #fff;
+    background-color: #130729;
+    background-size: auto;
+    background-image: url(../assets/diagonal-tile.png);
+    background-repeat: repeat-x;
+    background-position: bottom left;
 
     .socials {
       display: flex;
@@ -221,6 +225,19 @@ export default {
     .est {
       color: #fff;
     }
+
+    // &::after {
+    //   content: "";
+    //   width: 100%;
+    //   height: 20px;
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   background-color: red;
+    //   background-image: url(../assets/diagonal-tile.png);
+    //   background-repeat: repeat-x;
+    //   background-position: bottom left;
+    // }
   }
 
   @media screen and (max-width: 600px) {
