@@ -1,7 +1,7 @@
 <template>
   <div class="coming-soon">
     <section class="coming-soon__intro">
-      <div class="arrows"></div>
+      <icon-mark class="arrows" />
       <h1 class="wordmark">Henceforward,</h1>
       <p class="about">
         we give more. We give smarter – to give social equity and racial justice
@@ -58,10 +58,11 @@
 </template>
 
 <script>
+import IconMark from '@/components/icons/mark.vue'
 export default {
   name: 'ComingSoon',
-  props: {
-    msg: String
+  components: {
+    IconMark
   }
 }
 </script>
@@ -95,10 +96,6 @@ export default {
       margin-bottom: 30px;
       width: 44px;
       height: 20px;
-      background-image: url(../assets/arrows_large.png);
-      background-repeat: no-repeat;
-      background-position: top left;
-      background-size: contain;
     }
 
     .wordmark {
