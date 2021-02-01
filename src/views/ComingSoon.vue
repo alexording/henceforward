@@ -1,7 +1,7 @@
 <template>
   <div class="coming-soon">
     <section class="coming-soon__intro">
-      <icon-mark class="arrows" />
+      <icon-mark />
       <h1 class="wordmark">Henceforward,</h1>
       <p class="about">
         we give more. We give smarter – to give social equity and racial justice
@@ -50,19 +50,26 @@
     <!--End mc_embed_signup-->
 
     <footer class="coming-soon__footer">
-      insta logo
-      twitter logo
-      EST 2020
+      <div class="socials">
+        <a class="socials__link" href="/" target="_blank"><icon-insta /></a>
+        <a class="socials__link" href="/" target="_blank"><icon-twitter /></a>
+      </div>
+      <span class="est">EST 2020</span>
     </footer>
   </div>
 </template>
 
 <script>
 import IconMark from '@/components/icons/mark.vue'
+import IconInsta from '@/components/icons/insta.vue'
+import IconTwitter from '@/components/icons/twitter.vue'
+
 export default {
   name: 'ComingSoon',
   components: {
-    IconMark
+    IconMark,
+    IconInsta,
+    IconTwitter
   }
 }
 </script>
@@ -76,7 +83,8 @@ export default {
   min-height: 100%;
 
   &__intro,
-  &__form--wrapper {
+  &__form--wrapper,
+  &__footer {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -92,7 +100,7 @@ export default {
     font: 400 4.5em 'Jomhuria', sans-serif;
     line-height: 80%;
 
-    .arrows {
+    .icon-mark {
       margin-bottom: 30px;
       width: 44px;
       height: 20px;
@@ -102,6 +110,7 @@ export default {
       font-weight: 400;
       color: #130729;
       text-transform: uppercase;
+      word-wrap: break-word;
     }
 
     .about {
@@ -157,10 +166,11 @@ export default {
       flex: 0 1 auto;
       height: 45px;
       width: auto;
+      max-width: 100%;
       margin: 0;
       padding: 15px 20px;
-      border: 0;
       border-radius: 20px;
+      border: 1px solid #42807C;
       background: #42807C;
       font: 400 1.2em 'Merriweather Sans', sans-serif;
       color: #fff;
@@ -179,15 +189,42 @@ export default {
   }
 
   &__footer {
+    padding-top: 20px;
+    padding-bottom: 30px;
     display: flex;
     flex-flow: row nowrap;
     flex: 0 0 auto;
+    justify-content: space-between;
     background: #130729;
+    color: #fff;
+
+    .socials {
+      display: flex;
+      flex-flow: row nowrap;
+
+      &__link {
+        display: block;
+        margin-right: 20px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .est {
+      color: #fff;
+    }
   }
 
   @media screen and (max-width: 600px) {
     &__form__field {
       max-width: 100%;
+      min-width: 100%;
       margin-right: 0;
       margin-bottom: 10px;
     }
@@ -198,7 +235,7 @@ export default {
       padding-top: 50px;
       padding-bottom: 50px;
 
-      .arrows {
+      .icon-mark {
         margin-bottom: 50px;
       }
 
@@ -207,7 +244,8 @@ export default {
 
   @media screen and (min-width: 768px) {
     &__intro,
-    &__form--wrapper {
+    &__form--wrapper,
+    &__footer  {
       padding-left: 100px;
       padding-right: 100px;
     }
@@ -217,7 +255,7 @@ export default {
       padding-bottom: 80px;
       font-size: 9.0em;
 
-      .arrows {
+      .icon-mark {
         margin-bottom: 80px;
         width: 81px;
         height: 37px;
@@ -229,6 +267,10 @@ export default {
       padding-bottom: 50px;
     }
 
+    &__footer {
+      padding-top: 45px;
+      padding-bottom: 50px;
+    }
   }
 }
 </style>
