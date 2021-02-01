@@ -54,7 +54,7 @@
         <a class="socials__link" href="/" target="_blank"><icon-insta /></a>
         <a class="socials__link" href="/" target="_blank"><icon-twitter /></a>
       </div>
-      <span class="est">EST 2020</span>
+      <icon-est />
     </footer>
   </div>
 </template>
@@ -63,13 +63,15 @@
 import IconMark from '@/components/icons/mark.vue'
 import IconInsta from '@/components/icons/insta.vue'
 import IconTwitter from '@/components/icons/twitter.vue'
+import IconEst from '@/components/icons/est.vue'
 
 export default {
   name: 'ComingSoon',
   components: {
     IconMark,
     IconInsta,
-    IconTwitter
+    IconTwitter,
+    IconEst
   }
 }
 </script>
