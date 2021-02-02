@@ -225,19 +225,6 @@ export default {
     .est {
       color: #fff;
     }
-
-    // &::after {
-    //   content: "";
-    //   width: 100%;
-    //   height: 20px;
-    //   position: absolute;
-    //   bottom: 0;
-    //   left: 0;
-    //   background-color: red;
-    //   background-image: url(../assets/diagonal-tile.png);
-    //   background-repeat: repeat-x;
-    //   background-position: bottom left;
-    // }
   }
 
   @media screen and (max-width: 600px) {
@@ -246,6 +233,10 @@ export default {
       min-width: 100%;
       margin-right: 0;
       margin-bottom: 10px;
+    }
+
+    &__form__button {
+      margin-top: 5px;
     }
   }
 
