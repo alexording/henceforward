@@ -2,7 +2,7 @@
   <div class="coming-soon">
     <section class="coming-soon__intro">
       <icon-mark />
-      <h1 class="wordmark">Henceforward,</h1>
+      <h1 class="name">Henceforward,</h1>
       <p class="about">
         we give more. We give smarter – to give social equity and racial justice
         a chance to be realized in our lifetime.
@@ -84,7 +84,6 @@ export default {
   min-width: 100%;
   min-height: 100%;
 
-  &__intro,
   &__form--wrapper,
   &__footer {
     padding-left: 20px;
@@ -95,12 +94,11 @@ export default {
     display: flex;
     flex-flow: column nowrap;
     flex: 0 0 auto;
-
+    max-width: 720px;
+    margin-left: 20px;
+    margin-right: 20px;
     padding-top: 30px;
     padding-bottom: 30px;
-
-    font: 400 4.5em 'Jomhuria', sans-serif;
-    line-height: 80%;
 
     .icon-mark {
       margin-bottom: 30px;
@@ -108,7 +106,13 @@ export default {
       height: 20px;
     }
 
-    .wordmark {
+    .name,
+    .about {
+      font: 400 45px 'Jomhuria', sans-serif;
+      line-height: 80%;
+    }
+
+    .name {
       font-weight: 400;
       color: #130729;
       text-transform: uppercase;
@@ -135,7 +139,7 @@ export default {
 
     &__header {
       margin: 0 0 15px 0;
-      font: 400 1.4em 'Merriweather Sans', sans-serif;
+      font: 400 14px 'Merriweather Sans', sans-serif;
       color: #fff;
     }
 
@@ -154,13 +158,13 @@ export default {
       width: 100%;
       padding: 12px;
       margin: 0;
-      border: 1px solid #fff;
+      border: 2px solid #fff;
       background-color: #fff;
-      font: 500 1.2em/1.2 'Merriweather', sans-serif;
+      font: 500 12px/1.2 'Merriweather', sans-serif;
 
       &:focus {
         outline: none;
-        border: 1px solid #ff0000;
+        border: 2px solid #4CBB79;
       }
     }
 
@@ -172,20 +176,22 @@ export default {
       margin: 0;
       padding: 15px 20px;
       border-radius: 20px;
-      border: 1px solid #42807C;
+      border: 2px solid #42807C;
       background: #42807C;
-      font: 400 1.2em 'Merriweather Sans', sans-serif;
+      font: 400 12px/1 'Merriweather Sans', sans-serif;
       color: #fff;
       text-transform: uppercase;
       cursor: pointer;
 
       &:focus {
         outline: none;
-        border: 1px solid #ff0000;
+        border: 2px solid #4CBB79;
       }
 
       &:hover {
-        opacity: 0.8;
+        background: #4CBB79;
+        border: 2px solid #4CBB79;
+        color: #130729;
       }
     }
   }
@@ -253,7 +259,6 @@ export default {
   }
 
   @media screen and (min-width: 768px) {
-    &__intro,
     &__form--wrapper,
     &__footer  {
       padding-left: 100px;
@@ -261,9 +266,15 @@ export default {
     }
 
     &__intro {
+      margin-left: 100px;
+      margin-right: 100px;
       padding-top: 80px;
       padding-bottom: 80px;
-      font-size: 9.0em;
+
+      .name,
+      .about {
+        font-size: 90px;
+      }
 
       .icon-mark {
         margin-bottom: 80px;

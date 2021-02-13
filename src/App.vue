@@ -23,7 +23,7 @@ body {
 body {
   background-color: #fff;
   color: #000;
-  font: 400 0.625em/1.2 'Merriweather', sans-serif;
+  font: 400 16px/1.2 'Merriweather', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
