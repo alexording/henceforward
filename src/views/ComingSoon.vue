@@ -51,8 +51,8 @@
 
     <footer class="coming-soon__footer">
       <div class="socials">
-        <a class="socials__link" href="/" target="_blank"><icon-insta /></a>
-        <a class="socials__link" href="/" target="_blank"><icon-twitter /></a>
+        <a class="socials__link" href="https://www.instagram.com/henceforward_co/" target="_blank"><icon-insta /></a>
+        <a class="socials__link" href="https://twitter.com/henceforward_co" target="_blank"><icon-twitter /></a>
       </div>
       <icon-est />
     </footer>
