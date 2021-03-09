@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
-    <router-view/>
-  </div>
+  <router-view/>
 </template>
 
 <style lang="scss">
@@ -13,33 +11,27 @@ html {
   box-sizing: inherit;
 }
 
+html,
 body {
   margin: 0;
   padding: 0;
-  font: 400 0.625em/1.2 'Oswald', sans-serif;
-  background-color: #000;
-  color: #fff;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  font: 400 16px/1.2 'Merriweather', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
-h2 {
+h2,
+p {
  margin: 0;
  padding: 0;
 }
-
-h1.wordmark {
- font: 400 6.0em/1 'Jomhuria', sans-serif;
- text-transform: uppercase;
-}
-
-h2 {
-  font-size: 1.8em;
-}
-
-label {
-  font-size: 1.6em;
-}
-
 </style>
