@@ -27,7 +27,7 @@ Continous deployment is enabled on Netlify, both main and staging auto-deploy fr
 
 
 ### Staging
-1. **Create a new PR on Staging**.
+1. **Create a new PR on Staging**.[1]
 2. **Verify your changes via Netlfiy.** Netfliy will automatically create a preview build linked the PR.
 3. **Merge to Staging**.
 4. **Staging Build Starts** Netlify will automactially rebuild and deploy the staging site.
@@ -35,11 +35,14 @@ Continous deployment is enabled on Netlify, both main and staging auto-deploy fr
 
 
 ### Production
-1. **Create a new PR to Main**. `main` is the production branch.
+1. **Create a new PR to Main**.[1] `main` is the production branch.
 2. **Verify your changes via Netlfiy.** Netfliy will automatically create a preview build linked the PR.
 3. **Merge to Main**.
 4. **Production Build Starts** Netlify will automactially rebuild and deploy the production site.
 5. https://henceforward.co wil be updated!
+
+
+[1] Netfliy will kickoff a new build for commits directly to the branch also.
 
 ---
 
